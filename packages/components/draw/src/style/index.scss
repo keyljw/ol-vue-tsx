@@ -1,0 +1,15 @@
+.omap-overlay-text-container {
+  display: block;
+  width: auto;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #fff;
+  padding: 2px 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 10px;
+  color: #666;
+  font-size: 14px;
+}

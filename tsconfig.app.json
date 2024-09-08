@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "packages/**/*",
+    "packages/**/*.vue",
+    "play/env.d.ts",
+    "play/src/**/*",
+    "play/src/**/*.vue",
+    "play/vite.config.ts",
+    "docs/**/*",
+    "docs/**/*.vue"
+  ],
+  "exclude": ["play/src/**/__tests__/*", "packages/core/dist/**/*"],
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    "baseUrl": ".",
+    "paths": {
+      "@play/*": ["play/src/*"],
+      "@docs/*": ["./docs/*"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ol-vue-tsx",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "基于 vue3 tsx 封装的 omap 组件库",
+  "main": "dist/omap.umd.js",
+  "module": "dist/omap.es.js",
+  "types": "dist/types/packages/index.d.ts",
+  "keywords": [
+    "基于 vue3 tsx 封装的 omap 组件库"
+  ],
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "liujiawei",
+  "scripts": {
+    "build": "vite build",
+    "build:umd": "vite build --config vite.umd.config.ts",
+    "build:es": "vite build --config vite.es.config.ts"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "ol": "^8.2.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vue-omap/components": "workspace:*"
+  }
+}

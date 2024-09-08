@@ -1,0 +1,47 @@
+{
+  "name": "vue-project",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @vue-omap/play dev",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@ruabick/vitepress-demo-block": "^0.3.3",
+    "@vue-omap/hooks": "workspace:*",
+    "@vue-omap/theme": "workspace:*",
+    "@vue-omap/utils": "workspace:*",
+    "vue-omap": "workspace:*",
+    "element-plus": "^2.5.6",
+    "ol": "^8.2.0",
+    "sass": "^1.77.8",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@ruabick/md-demo-plugins": "^0.3.3",
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.5",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "npm-run-all2": "^6.2.0",
+    "prettier": "^3.2.5",
+    "rollup-plugin-bundle-analyzer": "^1.6.6",
+    "typescript": "~5.4.0",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^4.0.3",
+    "vitepress": "1.0.0-rc.42",
+    "vue-tsc": "^2.0.21"
+  }
+}

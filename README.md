@@ -2,109 +2,63 @@
 
 ## 文档
 
-**[https://vue-amap.guyixi.cn](https://vue-amap.guyixi.cn)**
+**[https://keyljw.github.io/ol-vue-tsx](https://keyljw.github.io/ol-vue-tsx)**
 
-> @vuemap/vue-amap是一套基于Vue3 和高德地图2.0的地图组件。
-> 该版本对原vue-amap组件进行升级，主要适配amap2.0相关的接口，同时调整事件绑定形式，调整为使用v-on进行事件绑定。
-> 组件中将会对高德可视化组件loca进行封装，同时提供threejs的接口
-> 该项目基于 https://github.com/ElemeFE/vue-amap/ 开发
+> 基于 vue3 和 tsx 封装openlayers组件库。。
 > 支持全量导入、按需导入和自动导入
 
 ```html
 觉得有用可以给个star
 ```
 
-## 安装
+# 快速开始
 
-```
-// 安装核心库
-npm i -S @vuemap/vue-amap
-// 安装loca相关库
-npm i -S @vuemap/vue-amap-loca
-// 安装其他扩展库，主要为threejs相关
-npm i -S @vuemap/vue-amap-extra
-```
+引导您如何在项目中使用`ol-vue-tsx`
 
-## 快速上手
+### Vue版本
 
-引入@vuemap/vue-amap
+当前支持的 Vue 版本`^3.0.0`
 
-```javascript
-// 引入vue-amap
-import VueAMap, { initAMapApiLoader } from '@vuemap/vue-amap'
-import '@vuemap/vue-amap/dist/style.css'
+### 1. 安装
 
-// 初始化vue-amap
-initAMapApiLoader({
-  // 高德的key
-  key: 'YOUR_KEY',
-  securityJsCode: 'securityJsCode' // 新版key需要配合安全密钥使用
-  //Loca:{
-  //  version: '2.0.0'
-  //} // 如果需要使用loca组件库，需要加载Loca
-})
-createApp(App).use(VueAMap)
-```
-
-## 自动导入
-
-首先你需要安装`unplugin-vue-components` 、 `unplugin-auto-import` 、 `@vuemap/unplugin-resolver`这三款插件
-
-> 注意，对于使用@vuemap/vue-amap@1版本的来说，`@vuemap/unplugin-resolver`版本必须使用1.x.x版本
-
-### 使用@vuemap/vue-amap@latest 版本
+进入你的项目文件夹，使用 PNPM 安装`ol-vue-tsx`
 
 ```shell
-npm install -D unplugin-vue-components unplugin-auto-import @vuemap/unplugin-resolver
+# npm
+npm install -S ol-vue-tsx
+
+# yarn
+yarn  add -S ol-vue-tsx
+
+# pnpm
+pnpm add -S ol-vue-tsx
 ```
 
-### 使用@vuemap/vue-amap@1 版本
+### 2. 引入插件和配置
 
-```shell
-npm install -D unplugin-vue-components unplugin-auto-import @vuemap/unplugin-resolver@1
-```
-
-然后在main.ts中导入css和进行初始化key
+在`src/main.ts`文件中写入以下内容
 
 ```ts
-import App from './App.vue'
-import { initAMapApiLoader } from '@vuemap/vue-amap'
-import '@vuemap/vue-amap/dist/style.css'
-initAMapApiLoader({
-  key: 'YOUR_KEY'
-})
+// 全局注册
+import omap from 'ol-vue-tsx'
 
-createApp(App).mount('#app')
+createApp(App).use(omap, { tk: '天地图tk' }).mount('#app')
 ```
-
-再修改配置文件，把下列代码插入到你的 Vite 或 Webpack 的配置文件中
 
 ```ts
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { VueAmapResolver } from '@vuemap/unplugin-resolver'
+// 全局注册部分组件
+import { OPoint } from 'ol-vue-tsx'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    vue(),
-    AutoImport({
-      resolvers: [VueAmapResolver()]
-    }),
-    Components({
-      resolvers: [VueAmapResolver()]
-    })
-  ]
-})
+createApp(App).use(OPoint).mount('#app')
 ```
 
-## 组件
+### 使用
 
-### 地图
+在`src/App.vue`文件的`<template>`中增加以下内容
 
 ```vue
-<el-amap :zoom="zoom" :center="center">
-</el-amap>
+<template>
+  <!-- 使用 地图 组件 -->
+  <o-map height="400px" :center="[120.261466, 30.337523]" :zoom="8" />
+</template>
 ```

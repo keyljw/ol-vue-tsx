@@ -1,6 +1,6 @@
 {
   "name": "ol-vue-tsx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "基于 vue3 tsx 封装的 omap 组件库",
   "main": "dist/omap.umd.js",
@@ -10,7 +10,8 @@
     "基于 vue3 tsx 封装的 omap 组件库"
   ],
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "license": "MIT",
   "publishConfig": {

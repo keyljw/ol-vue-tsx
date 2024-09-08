@@ -1,9 +1,9 @@
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 // import '../../../src/styles/index.css'
-import omap from 'vue-omap'
+import omap from 'ol-vue-tsx'
 import DemoBlock from '@ruabick/vitepress-demo-block'
-import 'vue-omap/dist/index.css'
+import 'ol-vue-tsx/dist/index.css'
 import '@ruabick/vitepress-demo-block/dist/style.css'
 import popup from '../../components/popup.vue'
 export default {

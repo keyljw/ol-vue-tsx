@@ -15,7 +15,7 @@
     "@vue-omap/hooks": "workspace:*",
     "@vue-omap/theme": "workspace:*",
     "@vue-omap/utils": "workspace:*",
-    "vue-omap": "workspace:*",
+    "ol-vue-tsx": "workspace:*",
     "element-plus": "^2.5.6",
     "ol": "^8.2.0",
     "sass": "^1.77.8",

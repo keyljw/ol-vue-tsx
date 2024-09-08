@@ -79,7 +79,12 @@ export default defineConfig({
       pattern: '',
       text: '在 GitHub 上编辑此页'
     },
-    socialLinks: [{ icon: 'github', link: '' }]
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/keyljw/ol-vue-tsx'
+      }
+    ]
     // footer: {
     //   message: '组件库',
     //   copyright: 'Copyright '
